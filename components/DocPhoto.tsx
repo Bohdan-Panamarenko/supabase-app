@@ -23,7 +23,7 @@ export default function DocPhoto(props: IdPhotoProps) {
       }
       const url = URL.createObjectURL(data)
       setDocUrl(url)
-    } catch (error) {
+    } catch (error: any) {
       console.log('Error downloading image: ', error.message)
     }
   }
@@ -53,7 +53,7 @@ export default function DocPhoto(props: IdPhotoProps) {
       }
       console.log(filePath)
       props.onUpload(filePath)
-    } catch (error) {
+    } catch (error: any) {
       alert(error.message)
     } finally {
       setUploading(false)

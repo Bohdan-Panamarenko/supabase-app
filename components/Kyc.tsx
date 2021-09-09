@@ -48,7 +48,7 @@ export default function Kyc(props: { session: Session }) {
         setCity(data.city)
         setDocUrl(data.doc_url)
       }
-    } catch (error) {
+    } catch (error: any) {
       alert(error.message)
     } finally {
       setLoading(false)
@@ -78,7 +78,7 @@ export default function Kyc(props: { session: Session }) {
     if (error) {
       throw error
     }
-    } catch (error) {
+    } catch (error: any) {
       alert(error.message)
     } finally {
       setLoading(false)
