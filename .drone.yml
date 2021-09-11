@@ -25,4 +25,3 @@ steps:
     repo: bohdanpn/supabase-app
     tags: ${DRONE_COMMIT:0:7}
   
-
