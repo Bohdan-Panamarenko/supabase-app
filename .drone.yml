@@ -10,10 +10,13 @@ steps:
   - npm install
   - npm run build
   when:
-    branch:
-      exclude:
+    exclude:
+      branch:
       - master
       - main
+      event:
+        exclude:
+        - pull_request
 
 - name: build_docker_image
   image: plugins/docker
